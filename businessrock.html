@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .headerdiv{
+            background-color: black;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            color: white;
+        }
+        .textdiv{
+            text-align: center;
+            font-size: 50px;
+        }
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: blue;
+  border-radius: 10px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+.menudiv{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.businesstext{
+    color:green;
+}
+.rocktext{
+    color:blue;
+}
+.formdiv{
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.inputdiv{
+    margin-left: 25%;
+
+}
+.input2div{
+    margin-left: 25%;
+    margin-top: 15px;
+}
+.input{
+    width: 300px;
+    box-shadow: 4px 0px 4px white;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+}
+.input2{
+    width: 65%;
+    box-shadow: 4px 0px 4px white;
+    height: 30px;
+    border: 0;
+    border-bottom-left-radius:5px;
+    border-top-left-radius:5px;
+}
+.inputbutton{
+    border: 0;
+    width: 100px;
+    background-color: green;
+    height: 32px;
+    margin-left: -3px;
+    border-bottom-right-radius:5px;
+    border-top-right-radius:5px;
+}
+.tablediv{
+    margin:0 auto;
+}
+table{
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.emptytr{
+    height: 20px;
+}
+.tr{
+    background-color: antiquewhite;
+    height: 30px;
+
+}
+    </style>
+</head>
+<body>
+    <div class="headerdiv">
+        <div>
+            1
+        </div>
+        <div>
+            2
+        </div>
+    </div>
+    <div class="textdiv">
+        <span class="businesstext">Business</span><span class="rocktext">Rock</span>
+    </div>
+    <div class="menudiv">
+        <ul>
+            <li style="float:right"><a href="#home">Home</a></li>
+            <li style="float:right"><a href="#news">News</a></li>
+            <li style="float:right"><a href="#contact">Contact</a></li>
+            <li style="float:right"><a class="active" href="#about">About</a></li>
+          </ul>
+    </div>
+    <div class="formdiv">
+        <div class="inputdiv">
+            <input type="text" placeholder="Enter First Name" class="input">
+            <input type="text" placeholder="Enter Mobile Number" class="input">
+        </div>
+        <div class="input2div">
+            <input type="text" placeholder="Enter City" class="input2">
+            <input type="button" value="Submit" class="inputbutton">
+
+        </div>
+    </div>
+    <div class="tablediv">
+        <form action="#">
+            <table>
+                <tr class="tr">
+                    <td>
+                        Enter Mobile Number
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr class="emptytr">
+
+                </tr>
+                <tr class="tr">
+                    <td>
+                        Enter Mobile Number
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr class="emptytr">
+
+                </tr>
+                <tr class="tr">
+                    <td>
+                        Enter Mobile Number
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr><tr class="emptytr">
+
+                </tr>
+                <tr class="tr">
+                    <td>
+                        Enter Mobile Number
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr><tr class="emptytr">
+
+                </tr>
+                <tr class="tr">
+                    <td>
+                        Enter Mobile Number
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr><tr class="emptytr">
+
+                </tr>
+                <tr class="tr">
+                    <td>
+                        Enter Mobile Number
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr><tr class="emptytr">
+
+                </tr>
+                <tr class="tr">
+                    <td>
+                        Enter Mobile Number
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr><tr class="emptytr">
+
+                </tr>
+                <tr class="tr">
+                    <td>
+                        Enter Mobile Number
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div>
+        <div style="background-color: red;">
+            1
+        </div>
+        <div style="background-color: blue;">
+            2
+        </div>
+        <div style="background-color: green;">
+            3
+        </div>
+        <div style="background-color: aquamarine;">
+            4
+        </div>
+    </div>
+</body>
+</html>
