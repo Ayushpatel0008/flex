@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{border: 1px solid;}
+        .row{ display: flex; height: 200px; }
+        .conainer{ width: 80%; margin: 0 auto; }
+        .col-1{ background-color: brown; flex: 0 1 30%; }
+        .col-2{ background-color: rgb(25, 104, 33); flex: 1 1 auto; }
+        .col-3{ background-color: rgb(27, 60, 158); 
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis:60% ;            
+            flex: 0 1 60%; }
+    </style>
+</head>
+<body>
+
+    <div class="conainer">
+        <div class="row">
+            <div class="col-1">col-1</div>
+            <div class="col-2">col-2</div>
+            <div class="col-3">col-3</div>
+        </div>
+    </div>
+    
+</body>
+</html>
