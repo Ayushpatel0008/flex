@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "inter", serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    padding: 15px 0;
+    gap: 5px;
+    background-color: white;
+}
+
+.jcs {
+    justify-content: space-evenly;
+}
+
+.ali {
+    align-items: center;
+}
+
+.nev-bar {
+    margin-bottom: 10px;
+}
+
+.header-logo img {
+    width: 75px;
+    margin-top: 6px;
+}
+
+.Search-box input {
+    background-color: #F5F5F5;
+    border: none;
+    height: 52px;
+    width: 249px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+input::placeholder {
+    text-align: center;
+    margin-right: 90px;
+}
+
+.fa-solid {
+    position: absolute;
+    color: #989898;
+    padding: 10px;
+    margin-left: 19px;
+    font-size: 19px;
+    margin-top: 4px;
+}
+
+ul li a {
+    /* font-size: 23px; */
+    /* color: #ffffff; */
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+.home a {
+    color: black;
+    font-size: 20px;
+    gap: 2px;
+}
+
+
+.fa-solid fa-cart-shopping {
+    /* position: absolute; */
+    color: #989898;
+    padding: 10px;
+}
+
+
+
+.fe-icon {
+    display: flex;
+    gap: 18px;
+}
+
+.fe-icon i {
+    font-size: 25px;
+
+}
+
+.navbar {
+    margin-top: 5px;
+    gap: 10px;
+}
+
+
+li {
+    list-style-type: none;
+    padding: 0px 30px;
+}
+
+
+/* <!-- section one --> */
+
+.sec-one-left {
+    background-color: #211C24;
+    height: 632px;
+    width: 1263px;
+    display: flex;
+    gap: 16px;
+    padding: 95px;
+    padding-top: 118px;
+    flex-direction: column;
+    justify-content: cente
+}
+
+.sec-one {
+    display: flex;
+}
+
+.pro {
+    color: #ffffff;
+    opacity: 24%;
+    font-size: 25px;
+}
+
+.iphon p {
+    color: #ffffff;
+    font-size: 96px;
+    font-weight: 100;
+}
+
+.in-pro {
+    color: #F5F5F5;
+    font-weight: bold;
+}
+
+.cre-ev {
+    color: #909090;
+    font-size: 18px;
+}
+
+.shop {
+    height: 56px;
+    width: 191px;
+    background-color: #211C24;
+    border: 1px solid white;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 18px;
+    text-align: center;
+}
+
+.iph-img {
+
+    height: 632px;
+    width: 406px;
+    position: absolute;
+    background-color: #211C24;
+    right: 85px;
+}
+
+.po-re {
+    position: relative;
+}
+
+/* <!-- section one end --> */
+
+/* <!-- section two --> */
+
+.sec-two {
+    display: flex;
+}
+
+.play {
+    /* height: 343px; */
+    width: 360px;
+}
+
+.pla-yst {
+    display: flex;
+}
+
+.playstation {
+    font-size: 49px;
+    margin-top: 80px;
+}
+
+.io {
+    font-size: 14px;
+    padding: 34px;
+    color: #909090;
+    padding-left: 3px;
+}
+
+.hea-dph{
+    
+    top: 0 auto;
+}
