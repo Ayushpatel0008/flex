@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    padding: 15px 0;
+    /* gap: 5px; */
+    /* background-color: white; */
+}
+
+.jcs {
+    justify-content: space-evenly;
+}
+
+.ali {
+    align-items: center;
+}
+
+.col-75{
+    width: 75%;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 10px;
+}
+
+/* .logo{
+
+} */
+
+.header-buttons {
+    display: flex;
+}

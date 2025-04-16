@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            /* padding: 8px; */
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<table>console.log("Table data loaded.");
+console.log("Table headers: Revenues, 2010-06-01 - 2010-08-31, 2009-06-01 - 2009-08-31, 2009-12-01 - 2010-08-31");
+console.log("Table rows:");
+console.log("  - Revenues: cruise, Passenger Tickets, 1,829,000,000, 1,603,000,000, 4,342,000,000");
+console.log("  - Revenues: cruise, Onboard and other, 431,000,000, 407,000,000, 1,155,000,000");
+console.log("  - Revenues: Tour and other, 146,000,000, 150,000,000, 176,000,000");
+console.log("  - Revenues: Revenues, 2,406,000,000, 2,160,000,000, 5,673,000,000");
+console.log("  - Cruise: Commissions, transportation and other, 330,000,000, 292,000,000, 872,000,000");
+console.log("  - Cruise: Onboard and other, 67,000,000, 73,000,000, 190,000,000");
+console.log("  - Cruise: Payroll and related, 191,000,000, 172,000,000, 553,000,000");
+    <tr>
+        <th colspan="4"></th>
+        <th>2010-06-01 - 2010-08-31</th>
+        <th>2009-06-01 - 2009-08-31</th>
+        <th>2009-12-01 - 2010-08-31</th>
+    </tr>
+    
+    <tr>
+        <td rowspan="4">Revenues</td>
+        <td rowspan="2" >cruise</td>
+        <td colspan="2">Passenger Tickets</td>
+        <td>1,829,000,000</td>
+        <td>1,603,000,000</td>
+        <td>4,342,000,000</td>
+    </tr>
+    <tr>
+        <td colspan="2">Onboard and other</td>
+        <td>431,000,000</td>
+        <td>407,000,000</td>
+        <td>1,155,000,000</td>
+    </tr>
+    <tr>
+        <td colspan="3">Tour and other</td>
+        <td>146,000,000</td>
+        <td>150,000,000</td>
+        <td>176,000,000</td>
+    </tr>
+    <tr>
+        <td colspan="3">Revenues</td>
+        <td>2,406,000,000</td>
+        <td>2,160,000,000</td>
+        <td>5,673,000,000</td>
+    </tr>
+    <tr>
+        <td rowspan="3"></td>
+        <td rowspan="3"></td>
+        <th rowspan="3">Cruise</th>
+        <td>Commissions, transportation and other</td>
+        <td>330,000,000</td>
+        <td>292,000,000</td>
+        <td>872,000,000</td>
+    </tr>
+    <tr>
+        <td>Onboard and other</td>
+        <td>67,000,000</td>
+        <td>73,000,000</td>
+        <td>190,000,000</td>
+    </tr>
+    <tr>
+        <td>Payroll and related</td>
+        <td>191,000,000</td>
+        <td>172,000,000</td>
+        <td>553,000,000</td>
+    </tr>
+</table>
+
+</body>
+</html>

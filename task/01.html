@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlapping Squares</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+
+        .container {
+            position: relative;
+            width: 600px;
+            height: 300px;
+            background-color: #5B7EA9;
+
+        }
+
+        .square {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+
+        }
+
+        .square1 {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+        }
+
+        .square2 {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+
+        }
+
+
+        .red {
+            background-color: rgb(239, 72, 72);
+            top: -20px;
+            left: -20px;
+        }
+
+        .orange {
+            background-color: rgb(244, 199, 114);
+            top: -28px;
+            left: 254px;
+        }
+
+        .blue {
+            background-color: rgb(119, 212, 243);
+            top: 241px;
+            left: -35px;
+        }
+
+        .yellow {
+            background-color: rgb(235, 235, 83);
+            top: -28px;
+            left: 565px;
+        }
+
+        .purple {
+            background-color: rgb(154, 2, 154);
+            top: 251px;
+            left: 253px;
+        }
+
+        .green {
+            background-color: rgb(40, 167, 2);
+            top: 105px;
+            left: 254px;
+            position: relative;
+        }
+
+        .pink {
+            background-color: rgb(255, 10, 210);
+            top: 174px;
+            left: 565px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="square1 red"></div>
+        <div class="square orange"></div>
+        <div class="square blue"></div>
+        <div class="square yellow"></div>
+        <div class="square green"></div>
+        <div class="square pink"></div>
+        <div class="square2 purple"></div>
+    </div>
+</body>
+
+</html>

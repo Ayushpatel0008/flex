@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #333;
+        }
+        #gameCanvas {
+            background: #000;
+        }
+        #player {
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: absolute;
+            border-radius: 5px;
+        }
+        .bullet {
+            width: 10px;
+            height: 10px;
+            background: yellow;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .enemy {
+            width: 40px;
+            height: 40px;
+            background: green;
+            position: absolute;
+            border-radius: 5px;
+        }
+        #score {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="score">Score: <span id="scoreValue">0</span></div>
+    <div id="player"></div>
+
+    <script>
+        const player = document.getElementById('player');
+        const scoreElement = document.getElementById('scoreValue');
+        let score = 0;
+        let bullets = [];
+        let enemies = [];
+
+        // Player position
+        let playerX = window.innerWidth / 2;
+        let playerY = window.innerHeight / 2;
+
+        // Player movement
+        document.addEventListener('mousemove', (e) => {
+            playerX = e.clientX - 25;
+            playerY = e.clientY - 25;
+            player.style.left = playerX + 'px';
+            player.style.top = playerY + 'px';
+        });
+
+        // Shooting
+        document.addEventListener('click', (e) => {
+            createBullet(playerX + 25, playerY + 25, e.clientX, e.clientY);
+        });
+
+        function createBullet(startX, startY, targetX, targetY) {
+            const bullet = document.createElement('div');
+            bullet.className = 'bullet';
+            document.body.appendChild(bullet);
+
+            const angle = Math.atan2(targetY - startY, targetX - startX);
+            const velocity = 10;
+            const bulletObj = {
+                element: bullet,
+                x: startX,
+                y: startY,
+                vx: Math.cos(angle) * velocity,
+                vy: Math.sin(angle) * velocity
+            };
+            bullets.push(bulletObj);
+        }
+
+        function createEnemy() {
+            const enemy = document.createElement('div');
+            enemy.className = 'enemy';
+            document.body.appendChild(enemy);
+
+            const side = Math.floor(Math.random() * 4);
+            let x, y;
+
+            switch(side) {
+                case 0: // top
+                    x = Math.random() * window.innerWidth;
+                    y = -50;
+                    break;
+                case 1: // right
+                    x = window.innerWidth + 50;
+                    y = Math.random() * window.innerHeight;
+                    break;
+                case 2: // bottom
+                    x = Math.random() * window.innerWidth;
+                    y = window.innerHeight + 50;
+                    break;
+                case 3: // left
+                    x = -50;
+                    y = Math.random() * window.innerHeight;
+                    break;
+            }
+
+            enemies.push({
+                element: enemy,
+                x: x,
+                y: y
+            });
+        }
+
+        function updateGame() {
+            // Update bullets
+            for(let i = bullets.length - 1; i >= 0; i--) {
+                const bullet = bullets[i];
+                bullet.x += bullet.vx;
+                bullet.y += bullet.vy;
+                bullet.element.style.left = bullet.x + 'px';
+                bullet.element.style.top = bullet.y + 'px';
+
+                // Remove bullets that are off screen
+                if(bullet.x < 0 || bullet.x > window.innerWidth || 
+                   bullet.y < 0 || bullet.y > window.innerHeight) {
+                    bullet.element.remove();
+                    bullets.splice(i, 1);
+                }
+            }
+
+            // Update enemies
+            for(let i = enemies.length - 1; i >= 0; i--) {
+                const enemy = enemies[i];
+                const dx = playerX - enemy.x;
+                const dy = playerY - enemy.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                // Move towards player
+                const speed = 2;
+                enemy.x += (dx / distance) * speed;
+                enemy.y += (dy / distance) * speed;
+                enemy.element.style.left = enemy.x + 'px';
+                enemy.element.style.top = enemy.y + 'px';
+
+                // Check collision with bullets
+                for(let j = bullets.length - 1; j >= 0; j--) {
+                    const bullet = bullets[j];
+                    const bx = bullet.x - enemy.x;
+                    const by = bullet.y - enemy.y;
+                    const bulletDistance = Math.sqrt(bx * bx + by * by);
+
+                    if(bulletDistance < 30) {
+                        // Hit!
+                        enemy.element.remove();
+                        enemies.splice(i, 1);
+                        bullet.element.remove();
+                        bullets.splice(j, 1);
+                        score += 10;
+                        scoreElement.textContent = score;
+                        break;
+                    }
+                }
+
+                // Check collision with player
+                if(distance < 50) {
+                    alert('Game Over! Score: ' + score);
+                    location.reload();
+                }
+            }
+
+            requestAnimationFrame(updateGame);
+        }
+
+        // Spawn enemies periodically
+        setInterval(createEnemy, 2000);
+
+        // Start the game loop
+        updateGame();
+    </script>
+</body>
+</html>

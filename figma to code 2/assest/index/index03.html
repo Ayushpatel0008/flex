@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../img/icone.png" type="image/x-icon">
+  <title>Earrings-jewellery</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+
+    .logo {
+      padding-left: 550px;
+      padding-top: 30px;
+    }
+
+    .nav {
+      display: flex;
+    }
+
+    .nav>li {
+      list-style-type: none;
+    }
+
+    .nav>li>a {
+      text-decoration: none;
+      padding: 0 10px;
+      color: #ffffff;
+      justify-content: center;
+    }
+
+    .product-card {
+      background-color: #222;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+    }
+
+    .discount-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .product-title {
+      font-weight: bold;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    .p-d-t {
+      color: gray;
+      font-weight: bold;
+    }
+
+    .footer {
+      width: 100%;
+      height: 120px;
+      background-color: #1e1e1e;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="../img/logo.png" alt="" />
+    </div>
+    <nav class="nav-bar">
+      <ul class="nav">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="index01.html">About Us</a></li>
+        <li class="nav-item"><a href="index02.html">Store</a></li>
+        <li class="nav-item"><a style="color: darkgoldenrod;" href="index03.html">Earrings</a></li>
+        <li class="nav-item"><a href="index04.html">Rings</a></li>
+        <li class="nav-item"><a href="index05.html">Necklace</a></li>
+        <li class="nav-item"><a href="index06.html">My Account</a></li>
+        <li class="nav-item"><a href="index07.html">Contect Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="product-card">
+          <span class="discount-badge">-20%</span>
+          <img src="../img/02.jpg" class="img-fluid" alt="Couple Silver Ring Diamond">
+          <p class="p-d-t">Earrings</p>
+          <p class="product-title">Couple Silver Ring Diamond</p>
+          <div class="product-rating">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+                  
+          </div>
+          <p class="price"> $99.00</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="product-card">
+          <img src="../img/02.jpg" class="img-fluid" alt="Silver Diamond Necklace">
+          <p class="p-d-t">Earrings</p>
+          <p class="product-title">Silver Diamond Necklace</p>
+          <div class="product-rating">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+                  
+          </div>
+          <p class="price">$185.00</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="product-card">
+          <img src="../img/02.jpg" class="img-fluid" alt="Diamond Wedding Ring">
+          <p class="p-d-t">Earrings</p>
+          <p class="product-title">Diamond Wedding Ring</p>
+          <div class="product-rating">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+                  
+          </div>
+          <p class="price">$95.00</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <footer class="footer">
+    <p>Copyright © 2025 Jewellery</p>
+    <p>Powered by Jewellery</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

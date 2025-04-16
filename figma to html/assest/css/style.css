@@ -5,26 +5,26 @@
     font-family: "inter", serif;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-}
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+    }
 
-.row {
-    display: flex;
-    padding: 15px 0;
-    gap: 5px;
-    background-color: white;
-}
+    .row {
+        display: flex;
+        padding: 15px 0;
+        gap: 5px;
+        background-color: white;
+    }
 
-.jcs {
-    justify-content: space-evenly;
-}
+    .jcs {
+        justify-content: space-evenly;
+    }
 
-.ali {
-    align-items: center;
-}
+    .ali {
+        align-items: center;
+    }
 
 .nev-bar {
     margin-bottom: 10px;
